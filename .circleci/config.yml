@@ -1,9 +1,9 @@
 defaults: &defaults
   working_directory: /go/src/github.com/chris-ramon/graphql
-    steps:
-      - checkout
-      - run: go get -v -t -d ./...
-      - run: go test ./...
+  steps:
+    - checkout
+    - run: go get -v -t -d ./...
+    - run: go test ./...
  
 version: 2
 jobs:
