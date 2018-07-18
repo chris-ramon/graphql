@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run: go get -v -t -d ./...
       - run: go test ./...
-  build-latest:
+  latest:
     docker:
       - image: circleci/golang:latest
     working_directory: /go/src/github.com/chris-ramon/graphql
@@ -31,3 +31,4 @@ workflows:
     jobs:
       - build-go1-8-7
       - build-go1-9-7
+      - latest
