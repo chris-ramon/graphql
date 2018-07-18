@@ -1,5 +1,7 @@
 # graphql [![Build Status](https://travis-ci.org/graphql-go/graphql.svg)](https://travis-ci.org/graphql-go/graphql) [![GoDoc](https://godoc.org/graphql.co/graphql?status.svg)](https://godoc.org/github.com/graphql-go/graphql) [![Coverage Status](https://coveralls.io/repos/graphql-go/graphql/badge.svg?branch=master&service=github)](https://coveralls.io/github/graphql-go/graphql?branch=master) [![Join the chat at https://gitter.im/graphql-go/graphql](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/graphql-go/graphql?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+[![codecov](https://codecov.io/gh/chris-ramon/graphql/branch/master/graph/badge.svg)](https://codecov.io/gh/chris-ramon/graphql)
+
 An implementation of GraphQL in Go. Follows the official reference implementation [`graphql-js`](https://github.com/graphql/graphql-js).
 
 Supports: queries, mutations & subscriptions.
