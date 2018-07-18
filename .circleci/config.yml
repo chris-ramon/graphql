@@ -1,33 +1,24 @@
 defaults: &defaults
+  working_directory: /go/src/github.com/chris-ramon/graphql
+    steps:
+      - checkout
+      - run: go get -v -t -d ./...
+      - run: go test ./...
  
-
-
 version: 2
 jobs:
   golang:1.8.7:
+    <<: *defaults
     docker:
       - image: circleci/golang:1.8.7
-    working_directory: /go/src/github.com/chris-ramon/graphql
-    steps:
-      - checkout
-      - run: go get -v -t -d ./...
-      - run: go test ./...
   golang:1.9.7:
+    <<: *defaults
     docker:
       - image: circleci/golang:1.9.7
-    working_directory: /go/src/github.com/chris-ramon/graphql
-    steps:
-      - checkout
-      - run: go get -v -t -d ./...
-      - run: go test ./...
   golang:latest:
+    <<: *defaults
     docker:
       - image: circleci/golang:latest
-    working_directory: /go/src/github.com/chris-ramon/graphql
-    steps:
-      - checkout
-      - run: go get -v -t -d ./...
-      - run: go test ./...
 
 workflows:
   version: 2
