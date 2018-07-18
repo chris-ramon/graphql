@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  golang:1-8-7:
+  golang:1.8.7:
     docker:
       - image: circleci/golang:1.8.7
     working_directory: /go/src/github.com/chris-ramon/graphql
