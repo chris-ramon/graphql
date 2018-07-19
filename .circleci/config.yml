@@ -26,9 +26,8 @@ jobs:
     steps:
       - checkout
       - run: go get -v -t -d ./...
-      - run: go get github.com/axw/gocov/gocov
       - run: go get github.com/mattn/goveralls
-      - run: go test -v -covermode=count -coverprofile=coverage.out
+      - run: go test -v -cover -race -coverprofile=coverage.out
       - run: /go/bin/goveralls -coverprofile=coverage.out -service=circle-ci -repotoken $COVERALLS_TOKEN
 
 workflows:
