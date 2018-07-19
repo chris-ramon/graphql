@@ -19,7 +19,7 @@ jobs:
     <<: *defaults
     docker:
       - image: circleci/golang:latest
-  codecov:
+  coveralls:
     working_directory: /go/src/github.com/chris-ramon/graphql
     docker:
       - image: circleci/golang:latest
@@ -38,4 +38,4 @@ workflows:
       - golang:1.8.7
       - golang:1.9.7
       - golang:latest
-      - codecov
+      - coveralls
