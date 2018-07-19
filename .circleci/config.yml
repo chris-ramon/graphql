@@ -26,8 +26,10 @@ jobs:
     steps:
       - checkout
       - run: go get -v -t -d ./...
-      - run: go test -race -coverprofile=coverage.txt -covermode=atomic
-      - run: bash <(curl -s https://codecov.io/bash)
+      - run: go get golang.org/x/tools/cmd/cover
+      - run: go get github.com/mattn/goveralls
+      - run: go test -v -covermode=count -coverprofile=coverage.out
+      - run: /go/bin/goveralls -coverprofile=coverage.out -service=circle-ci -repotoken $COVERALLS_TOKEN
 
 workflows:
   version: 2
